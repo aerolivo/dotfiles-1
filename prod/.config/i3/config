@@ -13,20 +13,19 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $dmenu_opts -i -fn "Consolas-10" -nb "#262626" -nf "#888888" -sb "#01AB84" -sf "#000000"
+set $dmenu_opts -i -fn "Consolas-14" -nb "#202124" -nf "#888888" -sb "#24D1E7" -sf "#000000"
 
 # general settings
 
 font pango:monospace 10
 floating_modifier $mod
-default_border pixel
+default_border none
 default_floating_border pixel
 focus_follows_mouse no
 workspace_layout tabbed
 
 # window-specific settings
 
-for_window [class="xterm-256color"] title_format "<span font='10'>  </span><span font='8'>%title</span>"
 for_window [class="kitty"] title_format "<span font='10'>  </span><span font='8'>%title</span>"
 for_window [class="firefox"] title_format "<span font='10'>  </span><span font='8'>%title</span>"
 for_window [class="Spotify"] title_format "<span font='10'>  </span><span font='8'>%title</span>"
@@ -40,7 +39,7 @@ for_window [instance="bluetoothctl"] floating enable, border normal, resize set 
 for_window [instance="quickpass"] floating enable, border normal, resize set 1000 600, sticky enable, focus
 for_window [instance="quickaws"] floating enable, border normal, resize set 1000 600, sticky enable, focus
 for_window [instance="quicklinks"] floating enable, border normal, resize set 1000 600, sticky enable, focus
-for_window [instance="term-scratchpad"] floating enable, resize set 1200 800, move scratchpad, focus
+for_window [instance="term-scratchpad"] floating enable, border pixel, resize set 1200 800, move scratchpad, focus
 
 # modes
 
@@ -112,14 +111,9 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id light -Ars "sysfs/backlight/intel_backlight" 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -Urs "sysfs/backlight/intel_backlight" 5
 
-bindsym $mod+XF86MonBrightnessUp exec --no-startup-id light -Ars "sysfs/leds/tpacpi::kbd_backlight" 1
-bindsym $mod+XF86MonBrightnessDown exec --no-startup-id light -Urs "sysfs/leds/tpacpi::kbd_backlight" 1
-
 bindsym $mod+l exec --no-startup-id physlock -m
 
 bindsym $mod+p exec --no-startup-id kitty --name quickpass --title quickpass $HOME/scripts/quickpass.sh
-bindsym $mod+i exec --no-startup-id kitty --name quickaws --title quickaws $HOME/scripts/quickaws.sh transurban
-bindsym $mod+o exec --no-startup-id kitty --name quicklinks --title quicklinks $HOME/scripts/quicklinks/quicklinks.sh $HOME/scripts/quicklinks/links.json
 
 bindsym $mod+period exec --no-startup-id kitty --name wifi-menu --title wifi-menu sudo wifi-menu
 bindsym $mod+comma exec --no-startup-id kitty --name bluetoothctl --title bluetoothctl bluetoothctl
@@ -132,9 +126,9 @@ bindsym $mod+r mode "resize"
 
 # colours
 
-client.focused #01AB84 #01AB84 #000000 #01AB84 #01AB84
+client.focused #24D1E7 #24D1E7 #202124 #24D1E7 #24D1E7
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50 #5F676A
-client.unfocused #333333 #222222 #888888 #292D2E #222222
+client.unfocused #333333 #202124 #888888 #292D2E #202124
 client.urgent #FF28D4 #FF28D4 #FFFFFF #FF28D4 #FF28D4
 client.placeholder #000000 #0C0C0C #FFFFFF #000000 #0C0C0C
 client.background #551177

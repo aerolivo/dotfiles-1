@@ -9,7 +9,7 @@ url("about:newtab") {
     }
     .sections-list{
         border-radius: 15px !important;
-        background: #18242b !important;
+        background: #202124 !important;
         box-shadow: 0 20px 70px rgba(24, 36, 43, 0.8) !important;
         padding-bottom: 15px !important;
     }
@@ -20,8 +20,8 @@ url("about:newtab") {
         height: 100% !important
     }
     body {
-        background:linear-gradient(180deg, #18242b, #00c195);
-	height: 100% !important;
+        background:linear-gradient(180deg, #18242b, #24D1E7);
+	    height: 100% !important;
         margin: 0 !important;
         background-repeat: no-repeat !important;
         background-attachment: fixed !important;
@@ -61,7 +61,7 @@ url("about:newtab") {
         margin: 0 auto;
     }
     .top-site-icon.rich-icon {
-        border: solid 3px #00c195;
+        border: solid 3px #24D1E7;
         box-shadow: 0 1px 4px rgba(0, 193, 149, 0.9) !important;
     }
 }

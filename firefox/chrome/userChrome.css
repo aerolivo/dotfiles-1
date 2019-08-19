@@ -8,25 +8,25 @@
 @import "popup/urlbar-results.css";
 
 .tab-line[selected="true"] {
-    background-color: #01AB84 !important;
+    background-color: #24D1E7 !important;
 }
 
 #urlbar[focused=true] {
-	border-color: #01AB84 !important;
-    background-color: #262626 !important;
+    border-color: #24D1E7 !important;
+    background-color: #202124 !important;
 }
 
 #urlbar {
-    background-color: #262626 !important;
+    background-color: #202124 !important;
 }
 
 .uautocomplete-richlistitem[selected="true"],
 .urlbarView-row[selected] {
-    background-color: #01AB84 !important;
+    background-color: #24D1E7 !important;
 }
 
 ::-moz-selection {
-    background-color: #01AB84 !important;
+    background-color: #24D1E7 !important;
 }
 
 /*#titlebar {
